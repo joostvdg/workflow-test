@@ -9,6 +9,7 @@ reviewers:
   groups:
     core-contributors:
       - joostvdg # username
+      - caladreas-bot
       #- team:owners # GitHub team
     content-contributors:
       - joostvdg # username
