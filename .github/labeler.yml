@@ -6,4 +6,4 @@ non-content:
   all: ['!content/**/*']
 
 in-review:
-- any: ['*']
+- '**/*'
