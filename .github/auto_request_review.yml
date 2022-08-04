@@ -1,0 +1,35 @@
+reviewers:
+  # The default reviewers
+  defaults:
+    - core-contributors # group
+    #- joostvdg # username
+    #- team:default-reviewers # GitHub team
+
+  # Reviewer groups each of which has a list of GitHub usernames
+  groups:
+    core-contributors:
+      - joostvdg # username
+      #- team:owners # GitHub team
+    content-contributors:
+      - joostvdg # username
+      - caladreas-bot
+
+
+files:
+  # Keys are glob expressions.
+  # You can assign groups defined above as well as GitHub usernames.
+  '**':
+    - core-contributors # group
+    #- team:external-reviewers # GitHub team
+  'content/**/*':
+    - content-contributors # group
+
+options:
+  ignore_draft: true
+  ignored_keywords:
+    - DO NOT REVIEW
+  enable_group_assignment: false
+
+  # Randomly pick reviewers up to this number.
+  # Do not set this option if you'd like to assign all matching reviewers.
+  number_of_reviewers: 2

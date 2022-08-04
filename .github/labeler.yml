@@ -1,0 +1,6 @@
+content:
+- content/**/*
+
+non-content:
+- any: ['*']
+  all: ['!content/**/*']
