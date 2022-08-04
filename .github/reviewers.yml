@@ -12,7 +12,7 @@ reviewers:
       #- team:owners # GitHub team
     content-contributors:
       - joostvdg # username
-      - caladreas-bot
+      - joostvdgbot
 
 
 files:
