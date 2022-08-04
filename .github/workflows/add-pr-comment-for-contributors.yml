@@ -7,17 +7,14 @@ jobs:
     name: Review instructions
     runs-on: ubuntu-latest
     steps:
-      - name: Render template
-        id: template
-        uses: chuhlomin/render-template@v1.5
-        with:
-          template: .github/pr-comment-template.md
-          vars: |
-            foo: this
-            bar: that
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v2
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body: ${{ steps.template.outputs.result }}
+          body: |
+            This comment was written by a bot!
+
+            This comment should contain information for the reviewer and reviewee.
+
+            And this is a [Link](https://github.com/marketplace/actions/create-or-update-comment) to a good resource.
           reactions: rocket
