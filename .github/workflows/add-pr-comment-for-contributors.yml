@@ -1,0 +1,20 @@
+on: pull_request_review
+name: Add PR comment with instructions for review
+jobs:
+  labelWhenApproved:
+    name: Review instructions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Render template
+        id: template
+        uses: chuhlomin/render-template@v1.4
+        with:
+          template: .github/pr-comment-template.md
+          vars: |
+            foo: this
+            bar: that
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: 1
+          body: ${{ steps.template.outputs.result }}

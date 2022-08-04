@@ -4,3 +4,6 @@ content:
 non-content:
 - any: ['*']
   all: ['!content/**/*']
+
+in-review:
+- any: ['*']
