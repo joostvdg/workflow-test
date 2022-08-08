@@ -15,6 +15,7 @@ jobs:
             {
               "pr_id": "${{ github.event.pull_request.number }}",
               "pr_title": "${{ github.event.pull_request.title }}"
+              "message": "Will this be a proper Markdown message?\n<https://github.com/joostvdg/workflow-test/pull/${{ github.event.pull_request.number }}|${{ github.event.pull_request.title }}>"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
